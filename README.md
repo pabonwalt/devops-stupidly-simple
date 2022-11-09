@@ -19,7 +19,7 @@
 Use following commands to add or update files using git command from terminal:
 
 ```
-git add index.php
-git commit -m "adding index.php"
+git add .
+git commit -m "adding some changes"
 git push -u origin main
 ```
