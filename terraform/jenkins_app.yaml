@@ -1,0 +1,28 @@
+#cloud-config
+groups:
+  - ubuntu: [root,sys]
+  - hashicorp
+
+# Add users to the system. Users are added after groups are added.
+users:
+  - default
+  - name: terraform
+    gecos: terraform
+    shell: /bin/bash
+    primary_group: hashicorp
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDtJbuq5qzVTFNOCg47x8Frh6y5Nnw9RcX8GvR2NZjZYl2TEzw0/s4NdrRhAXndpKZ1RqvgmL6ui5aQehLOiL0Xhdy4roW4KhpP+Xpk/nipwEGDY/NwCrp073lRaf/Uj8R3je56kPAyIWIDW800H3JlCGFPwgRYlM0RWUsGtQgm6XWGmnUBwWEtBi9adaIial5g44O4ZoTG9ub2pHZkB9OxPAY8mFv3EBHrKmTrBaXAdnkdDgLTnuTizwrurPoaQuPIDNDXYcD9BOQ8GzDFtpl7kP0hDjghEvx4Mik9weGMbPI8+6WlJexRdukgtm40DolMVN/Ow5yEHpOK62gVgdV6wIy5eGKy0DnRH9Vp8KTf2Pziw3W4pdKQhhKWAx6elDJH1BK0R0RxzfVJnmdizA+2Lv79+TWubPNZZkR1uEJ4/6esKDtJUy7oTYqRutucIK9u/F/dVMqCRyOj1AyY71BoXkVRygO4w9i35ZoLLwLlngon2/j9tw+2qUvcyYcHmc8= walter@centre
+
+runcmd:
+  - sudo apt update
+  - sudo apt install nginx -q -y
+  - sudo sudo apt install php8.1 php8.1-fpm php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline php8.1-mbstring php8.1-xml php8.1-gd php8.1-curl -q -y
+  - sudo systemctl enable nginx
+  - sudo systemctl restart nginx
+  - sudo systemctl enable php8.1-fpm
+  - sudo systemctl restart php8.1-fpm
+  - sudo curl https://raw.githubusercontent.com/hashicorp/learn-terraform-digitalocean-droplet/main/app/index.php -O
+
