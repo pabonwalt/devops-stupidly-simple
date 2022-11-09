@@ -1,16 +1,16 @@
 # LAB01
 
-## DEPLOY INFRAESTRUCTURE WITH TERRAFORM
+## DEPLOY INFRAESTRUCTURE USING TERRAFORM
 
-1. Install terraform from here: https://www.terraform.io/downloads
+1. Install terraform: https://www.terraform.io/downloads
 
-2. Deploy an Ubuntu 22.04 server with Jenkins service using DO (add docker, terraform
+2. Use terraform to deploy an Ubuntu 22.04 x64 droplet. Install Jenkins, Docker commands, Kubectl tools and curl: https://developer.hashicorp.com/terraform/tutorials/applications/digitalocean-provider
 
-## DEPLOY MY APP USING JENKINS, DOCKER AND K8S
+## DEPLOY APP01 USING JENKINS, DOCKER AND K8S
 
+1. Stuff pending to add
 
-
-## SOME USEFUL GIT COMMANDS
+## SOME GIT COMMANDS
 
 Use following commands to add or update files using git command from terminal:
 
