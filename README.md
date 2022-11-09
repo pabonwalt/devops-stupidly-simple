@@ -4,7 +4,7 @@
 
 1. Install terraform: https://www.terraform.io/downloads
 
-2. Use terraform to deploy an Ubuntu 22.04 x64 droplet. Install Jenkins, Docker commands, Kubectl tools and curl: https://developer.hashicorp.com/terraform/tutorials/applications/digitalocean-provider
+2. Use terraform to deploy an Ubuntu 22.04 x64 droplet. Install JDK, Jenkins, Docker and Kubectl tools: https://developer.hashicorp.com/terraform/tutorials/applications/digitalocean-provider
 
 3. Use terraform to deploy a DO Kubernetes cluster
 
