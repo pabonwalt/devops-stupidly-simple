@@ -2,7 +2,7 @@
 
 ## DEPLOY INFRAESTRUCTURE WITH TERRAFORM
 
-1. Install terraform from here: (https://www.terraform.io/downloads)
+1. Install terraform from here: https://www.terraform.io/downloads
 
 2. Deploy an Ubuntu 22.04 server with Jenkins service using DO (add docker, terraform
 
