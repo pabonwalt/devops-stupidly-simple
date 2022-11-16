@@ -6,13 +6,13 @@ All my notes about my job transition. From TELCO stuff to DEVOPS. Please use thi
 To deploy fully automated a Java webapp in Digitalocean public cloud using devops technologies.
 
 # TOOLS
-Infraestructure: Terraform
-CI/CD: Jenkins
-Code and config repo: Github
-Configuration: Ansible
-Containers: Docker
-Reliability: Kubernetes
-Operating system: Ubuntu 22.04 x86 (assumed it's fully installed prior start this lab)
+- Infraestructure: Terraform
+- CI/CD: Jenkins
+- Code and config repo: Github
+- Configuration: Ansible
+- Containers: Docker
+- Reliability: Kubernetes
+- Console operating system: Ubuntu 22.04 x86 (assumed it's fully installed prior start this lab)
 
 ### 1) Install terraform from official repos:
 
