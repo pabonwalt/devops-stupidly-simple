@@ -11,14 +11,6 @@ terraform {
 
 provider "digitalocean" {}
 
-resource "digitalocean_droplet" "jenkins" {
-  image     = "ubuntu-22-04-x64"
-  name      = "jenkins"
-  region    = "sfo3"
-  size      = "s-2vcpu-4gb-intel"
-  user_data = file("jenkins_app.yaml")
-}
-
 resource "digitalocean_kubernetes_cluster" "k8scluster01" {
   name   = "k8scluster01"
   region = "sfo3"
