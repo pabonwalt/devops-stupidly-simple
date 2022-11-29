@@ -4,7 +4,8 @@ All my notes about my job transition.
 ## GOAL
 To deploy a fully automated Java webapp in Amazon EKS using most common DevOps tools.
 
-## What resources we are going to use?
+## RESOURCES
+What resources we are going to require?
 - Infraestructure: Terraform
 - CI/CD: Jenkins
 - Code and config repo: Github
@@ -14,7 +15,8 @@ To deploy a fully automated Java webapp in Amazon EKS using most common DevOps t
 - Cloud platform: Amazon AWS (free tier resources)
 - Console operating system: Ubuntu 22.04 x86 (assumed it's fully installed prior start this lab)
 
-## Let's prepare our Linux console to build all this stuff 
+## PREPARING UBUNTU LINUX CONSOLE
+Let's prepare our Linux console to build all this stuff
 
 ### 1) Install terraform from official repos:
 
@@ -77,7 +79,7 @@ sudo systemctl start jenkins.service
 ```
 
 
-# MISC
+## CLONING REPO
 
 Clone DevOps Stupidly Simple (DSS) in your Ubuntu Linux console:
 
