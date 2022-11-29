@@ -1,17 +1,20 @@
 # DEVOPS STUPIDLY SIMPLE
-All my notes about my job transition. From TELCO stuff to DEVOPS. Please use this as a good introductory guide to start from scratch in this fascinating world.
+All my notes about my job transition.
 
 ## GOAL
-To deploy a fully automated Java webapp in Digitalocean public cloud using most common devops tools.
+To deploy a fully automated Java webapp in Amazon EKS using most common DevOps tools.
 
-# TOOLS
+## What resources we are going to use?
 - Infraestructure: Terraform
 - CI/CD: Jenkins
 - Code and config repo: Github
 - Configuration: Ansible
 - Containers: Docker
 - Reliability: Kubernetes
+- Cloud platform: Amazon AWS (free tier resources)
 - Console operating system: Ubuntu 22.04 x86 (assumed it's fully installed prior start this lab)
+
+## Let's prepare our Linux console to build all this stuff 
 
 ### 1) Install terraform from official repos:
 
@@ -76,10 +79,21 @@ sudo systemctl start jenkins.service
 
 # MISC
 
-Use following commands to add or update files using git command from terminal:
+Clone DevOps Stupidly Simple (DSS) in your Ubuntu Linux console:
+
+```
+apt install git
+mkdir github.com
+git clone git@github.com:pabonwalt/devops-stupidly-simple.git
+cd devops-stupidly-simple
+git config --global user.name "Pepe Grillo"
+```
+
+Use following commands to add or update files or directories using git commands from terminal:
 
 ```
 git add .
 git commit -m "adding some changes"
 git push -u origin main
 ```
+
