@@ -1,5 +1,4 @@
 # DEVOPS STUPIDLY SIMPLE
-(test1)
 All my notes about my job transition. From TELCO stuff to DEVOPS. Please use this as a good introductory guide to start from scratch in this fascinating world.
 
 ## GOAL
