@@ -88,7 +88,8 @@ apt install git
 mkdir github.com
 git clone git@github.com:pabonwalt/devops-stupidly-simple.git
 cd devops-stupidly-simple
-git config --global user.name "Pepe Grillo"
+git config --global user.email "walter@centre"
+git config --global user.name "Walter Pabon"
 ```
 
 Use following commands to add or update files or directories using git commands from terminal:
