@@ -5,7 +5,7 @@ All my notes about my job transition.
 To deploy a fully automated Java webapp in Amazon EKS using most common DevOps tools.
 
 ## RESOURCES
-What resources we are going to require?
+What resources we are going to use?
 - Infraestructure: Terraform
 - CI/CD: Jenkins
 - Code and config repo: Github
@@ -13,10 +13,10 @@ What resources we are going to require?
 - Containers: Docker
 - Reliability: Kubernetes
 - Cloud platform: Amazon AWS (free tier resources)
-- Console operating system: Ubuntu 22.04 x86 (assumed it's fully installed prior start this lab)
+- Console: Ubuntu 22.04 (amd64)
 
 ## PREPARING UBUNTU LINUX CONSOLE
-Let's prepare our Ubuntu Linux 22.04 machine to build all this stuff, assumed it's fully installed prior to start this lab.
+Let's prepare our Ubuntu 22.04 box to install all required software and dependencies using Ansible as configuration tool. It's assumed operating system is fully fresh installed and ready to use prior to start this lab.
 
 ```
 sudo apt install ansible git
