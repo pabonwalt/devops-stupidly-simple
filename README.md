@@ -25,21 +25,16 @@ ansible-playbook devops-stupidly-simple/ansible-deploy-console/playbook.yml -K
 
 ## CLONING REPO
 
-Clone DevOps Stupidly Simple (DSS) in your Ubuntu Linux console:
-
+Configure git global parameters:
 ```
-apt install git
-git clone git@github.com:pabonwalt/devops-stupidly-simple.git
-cd devops-stupidly-simple
-git config --global user.email "walter@centre"
 git config --global user.name "Walter Pabon"
+git config --global user.email "walter@centre"
 ```
 
-Use following commands to add or update files or directories using git commands from terminal:
-
+Use following commands to make changes:
 ```
 git add .
-git commit -m "adding some changes"
+git commit -m "adding improvements"
 git push -u origin main
 ```
 
