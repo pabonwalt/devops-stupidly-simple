@@ -23,7 +23,7 @@ git clone git@github.com:pabonwalt/devops-stupidly-simple.git
 ansible-playbook devops-stupidly-simple/ansible-deploy-console/playbook.yml -K
 ```
 
-## CLONING REPO
+## SOME GIT COMMANDS
 
 Configure git global parameters:
 ```
