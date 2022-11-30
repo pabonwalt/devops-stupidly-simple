@@ -16,7 +16,8 @@ What resources we are going to require?
 - Console operating system: Ubuntu 22.04 x86 (assumed it's fully installed prior start this lab)
 
 ## PREPARING UBUNTU LINUX CONSOLE
-Let's prepare our Linux console to build all this stuff
+Let's prepare our Ubuntu Linux 22.04 machine to build all this stuff, assumed it's fully installed prior to start this lab.
+
 ```
 sudo apt install ansible git
 git clone git@github.com:pabonwalt/devops-stupidly-simple.git
