@@ -2,6 +2,7 @@
  - name: INSTALLING SOFTWARE TO UBUNTU LINUX CONSOLE
    become: yes
    hosts: localhost
+   connection: local
    tasks:
 
      - name: Installing dependencies
