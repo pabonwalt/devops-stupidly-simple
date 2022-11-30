@@ -18,7 +18,7 @@ What resources we are going to require?
 ## PREPARING UBUNTU LINUX CONSOLE
 Let's prepare our Linux console to build all this stuff
 ```
-apt install ansible git
+sudo apt install ansible git
 git clone git@github.com:pabonwalt/devops-stupidly-simple.git
 ansible-playbook devops-stupidly-simple/ansible-deploy-console/playbook.yml -K
 ```
@@ -29,7 +29,6 @@ Clone DevOps Stupidly Simple (DSS) in your Ubuntu Linux console:
 
 ```
 apt install git
-mkdir github.com
 git clone git@github.com:pabonwalt/devops-stupidly-simple.git
 cd devops-stupidly-simple
 git config --global user.email "walter@centre"
