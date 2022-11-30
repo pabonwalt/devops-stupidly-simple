@@ -20,7 +20,7 @@ Let's prepare our Linux console to build all this stuff
 ```
 apt install ansible git
 git clone git@github.com:pabonwalt/devops-stupidly-simple.git
-ansible-playbook devops-stupidly-simple/ansible-deploy-console/playbook.yml -u ubuntu # replace by yours
+ansible-playbook devops-stupidly-simple/ansible-deploy-console/playbook.yml -u ubuntu -K # replace ubuntu user by yours
 ```
 
 ## CLONING REPO
