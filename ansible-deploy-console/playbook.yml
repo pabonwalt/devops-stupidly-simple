@@ -103,3 +103,23 @@
        ansible.builtin.debug:
          msg: "http://{{ ansible_host }}:8080"
 
+     - name: Downloading awscli
+       ansible.builtin.get_url:
+         url: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+         dest: /tmp
+         mode: '0655'
+     
+     - name: Unpacking awscli
+       ansible.builtin.unarchive:
+         src: /tmp/awscli-exe-linux-x86_64.zip
+         dest: /tmp
+
+     - name: Installing awscli
+       ansible.builtin.shell: /tmp/aws/install
+       register: awscli1
+
+     - name: Checking awscli installation result
+       ansible.builtin.debug:
+         msg: "{{ awscli1.stdout }}"
+
+
