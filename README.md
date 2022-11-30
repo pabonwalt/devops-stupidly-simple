@@ -24,6 +24,17 @@ git clone git@github.com:pabonwalt/devops-stupidly-simple.git
 ansible-playbook devops-stupidly-simple/ansible-deploy-console/playbook.yml -K
 ```
 
+## DEPLOYING OUR CLOUD INFRAESTRUCTURE
+We are going to use Terraform to deploy an AWS EKS cluster, it's assumed you have created a programatic user with all required IAM permissions, AWS credentials need to be set as following from terminal, replace information by yours:
+
+```
+aws configure
+AWS Access Key ID [********************]: 
+AWS Secret Access Key [********************]: 
+Default region name [us-east-1]: 
+Default output format [json]: 
+```
+
 ## SOME GIT COMMANDS
 
 Configure git global parameters:
