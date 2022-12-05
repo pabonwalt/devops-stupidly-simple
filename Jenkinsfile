@@ -1,5 +1,5 @@
 #!groovy
-pipeline {
+pipeline {
 	agent any
   stages {
     stage('Maven Install') {
