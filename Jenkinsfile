@@ -3,7 +3,7 @@ node {
   environment {
     registry = "pabonwalt/springboot-webapp"
     registryCredential = "7b473a1e-33ed-4ac7-89d3-e9c7f50fc19c"
-    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+    dockerImage = docker.build registry + "123"
   }
 
   stage("Clone the project") {
@@ -18,7 +18,10 @@ node {
 
   stage('Building and deploying image') {
     script {
-      docker.build registry + ":$BUILD_NUMBER"
+      docker.build registry + "123"
+      docker.withRegistry( '', registryCredential ) { 
+        dockerImage.push() 
+      }
     }
   }
 
