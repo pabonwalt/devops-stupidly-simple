@@ -17,11 +17,8 @@ node {
   }
 
   stage('Building and deploying image') {
-    script {
-      docker.build registry + "123"
-      docker.withRegistry( '', registryCredential ) { 
-        dockerImage.push() 
-      }
+    dir("springboot-webapp") {
+      dockerImage = docker.build("pabonwalt/springboot-webapp:latest")
     }
   }
 
