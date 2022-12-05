@@ -22,4 +22,8 @@ node {
     }
   }
 
+  stage('Deploy') {
+    sh 'kubectl apply -f springboot-webapp-k8s-deploy.yml'
+  }
+
 }
