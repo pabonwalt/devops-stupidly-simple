@@ -23,7 +23,9 @@ node {
   }
 
   stage('Deploy') {
-    withKubeConfig([credentialsId: 'kubernetes-login', serverUrl: 'https://60335DB898749C2B6FF40ADE6441CDF5.gr7.us-east-1.eks.amazonaws.com']) {
+    withKubeConfig([credentialsId: 'kubernetes-login',
+                    serverUrl: 'https://60335DB898749C2B6FF40ADE6441CDF5.gr7.us-east-1.eks.amazonaws.com',
+		    clusterName: 'arn:aws:eks:us-east-1:437889535746:cluster/cluster1']) {
       sh 'kubectl apply -f springboot-webapp-k8s-deploy.yml'
     }
   }
