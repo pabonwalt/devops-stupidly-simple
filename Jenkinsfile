@@ -1,5 +1,5 @@
-pipeline {
-	agent none
+pipeline {
+  agent any
   stages {
   	stage('Maven Install') {
     	agent {
