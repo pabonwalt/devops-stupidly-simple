@@ -4,16 +4,12 @@ registryCredential = "docker"
 }
 agent any
 stages {
-stage('Maven Install') {
-    agent {
-        docker {
-	    image 'maven:3.5.0'
-        }
-    }
 stage('Build') {
     steps{
     script {
-        sh 'mvn clean install'
+        sh 'git clone git@github.com:pabonwalt/devops-stupidly-simple.git'
+	sh 'cd devops-stupidly-simple/springboot-webapp'
+        sh './mvnw clean install'
     }
     }
 }
