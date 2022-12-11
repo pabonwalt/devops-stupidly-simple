@@ -34,6 +34,11 @@ Default region name [us-east-1]:
 Default output format [json]: 
 ```
 
+Test your AWS credentials from CLI:
+```
+aws sts get-caller-identity
+```
+
 Now lets build our cloud AWS EKS infraestructure, a very basic EKS cluster will be created as result, for testing purposes only.
 ```
 cd devops-stupidly-simple ; terraform apply -auto-approve
