@@ -41,7 +41,9 @@ aws sts get-caller-identity
 
 Now lets build our cloud AWS EKS infraestructure, a very basic EKS cluster will be created as result, for testing purposes only.
 ```
-cd devops-stupidly-simple ; terraform apply -auto-approve
+cd devops-stupidly-simple
+terraform init
+terraform apply -auto-approve
 ```
 
 ## SOME GIT COMMANDS
