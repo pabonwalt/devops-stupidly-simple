@@ -17,9 +17,16 @@ To deploy a fully automated Java webapp in Amazon EKS using most common DevOps t
 ## PREPARING DEPLOYMENT SERVER
 Let's prepare our deployment server to install all required software (terraform, docker, jenkins, kubectl, awscli) and dependencies using Ansible as configuration tool. It's assumed operating system is fully fresh installed and ready to use prior to start this lab.
 
+Set required global git parameters (only once)
+```
+git config --global user.name "Walter Pabon"
+git config --global user.email "walter@tcentre"
+```
+
+Install ansible, git and clone repo, ansible-playbook command will ask for your sudo password:
 ```
 sudo apt install ansible git
-git clone git@github.com:pabonwalt/devops-stupidly-simple.git
+git clone https://github.com/pabonwalt/devops-stupidly-simple.git
 ansible-playbook devops-stupidly-simple/ansible-deploy-CICD-tools.yml -K
 ```
 
@@ -54,11 +61,7 @@ terraform apply -auto-approve
 
 ## SOME GIT COMMANDS
 
-Configure git global parameters:
-```
-git config --global user.name "Walter Pabon"
-git config --global user.email "walter@centre"
-```
+
 
 Use following commands to push changes:
 ```
