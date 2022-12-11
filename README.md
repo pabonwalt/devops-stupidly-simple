@@ -67,3 +67,10 @@ git commit -m "adding improvements"
 git push
 ```
 
+Use following commands to create a new branch:
+```
+git checkout -b fix123
+git commit -m "adding improvements"
+git push
+```
+
