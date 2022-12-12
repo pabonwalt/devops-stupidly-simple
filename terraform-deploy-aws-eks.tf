@@ -26,14 +26,14 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "eks4t-cluster"
+  cluster_name = "dss4t"
 }
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.14.2"
 
-  name = "eks4t-vpc"
+  name = "dss4t"
 
   cidr = "10.0.0.0/16"
   azs  = slice(data.aws_availability_zones.available.names, 0, 3)
@@ -56,8 +56,8 @@ module "vpc" {
   }
 }
 
-resource "aws_security_group" "node_group_one" {
-  name_prefix = "node_group_one"
+resource "aws_security_group" "dss4t" {
+  name_prefix = "dss4t"
   vpc_id      = module.vpc.vpc_id
 
   ingress {
@@ -67,21 +67,6 @@ resource "aws_security_group" "node_group_one" {
 
     cidr_blocks = [
       "10.0.0.0/8",
-    ]
-  }
-}
-
-resource "aws_security_group" "node_group_two" {
-  name_prefix = "node_group_two"
-  vpc_id      = module.vpc.vpc_id
-
-  ingress {
-    from_port = 22
-    to_port   = 22
-    protocol  = "tcp"
-
-    cidr_blocks = [
-      "192.168.0.0/16",
     ]
   }
 }
@@ -102,26 +87,14 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-
-    one = {
-      name = "node-group-1"
+    dss4t = {
+      name = "dss4t"
       instance_types = ["t3.small"]
       min_size     = 1
       max_size     = 3
       desired_size = 2
       vpc_security_group_ids = [
-        aws_security_group.node_group_one.id
-      ]
-    }
-
-    two = {
-      name = "node-group-2"
-      instance_types = ["t3.small"]
-      min_size     = 1
-      max_size     = 2
-      desired_size = 1
-      vpc_security_group_ids = [
-        aws_security_group.node_group_two.id
+        aws_security_group.dss4t.id
       ]
     }
   }
