@@ -1,7 +1,6 @@
 # DEVOPS STUPIDLY SIMPLE
 All my notes about my job transition.
 
-
 ## GOAL
 To deploy a fully automated Java webapp in Amazon EKS using most common DevOps tools.
 

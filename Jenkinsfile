@@ -1,7 +1,7 @@
 node {
 
   stage("Clone the project") {
-    git credentialsId: '7b473a1e-33ed-4ac7-89d3-e9c7f50fc19c', branch: 'main', url: 'https://github.com/pabonwalt/devops-stupidly-simple.git'
+    git credentialsId: 'github-secrets', branch: 'main', url: 'https://github.com/pabonwalt/devops-stupidly-simple.git'
   }
 
   stage("Building jar") {
@@ -15,15 +15,15 @@ node {
   }
 
   stage('Push image') {
-    withDockerRegistry([ credentialsId: "dockerhub-access", url: "" ]) {
+    withDockerRegistry([ credentialsId: "dockerhub-secrets", url: "" ]) {
       dockerImage.push()
     }
   }
 
   stage('Deploy') {
-    withKubeConfig([credentialsId: 'kubernetes-access',
-                    serverUrl: 'https://977490BF7EF588E545EA0A2CBEB8F388.gr7.us-east-1.eks.amazonaws.com',
-		    clusterName: 'arn:aws:eks:us-east-1:437889535746:cluster/cluster1']) {
+    withKubeConfig([credentialsId: 'kubernetes-secrets',
+                    serverUrl: 'https://192.168.0.2:16443',
+		    clusterName: 'kubernetes']) {
       sh 'kubectl apply -f springboot-webapp-k8s-deploy.yml'
     }
   }
