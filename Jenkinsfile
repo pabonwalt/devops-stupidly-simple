@@ -11,7 +11,9 @@ node {
   }
 
   stage('Building and deploying image') {
+    dir("springboot-webapp") {
       dockerImage = docker.build("pabonwalt/springboot-webapp:latest")
+    }
   }
 
   stage('Push image') {
