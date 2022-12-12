@@ -23,7 +23,7 @@ node {
   stage('Deploy') {
     withKubeConfig([credentialsId: 'kubernetes-secrets',
                     serverUrl: 'https://192.168.0.2:16443',
-		    clusterName: 'kubernetes']) {
+		    clusterName: 'microk8s-cluster']) {
       sh 'kubectl apply -f springboot-webapp-k8s-deploy.yml'
     }
   }
