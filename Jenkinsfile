@@ -15,14 +15,14 @@ node {
   }
 
   stage('Push image') {
-    withDockerRegistry([ credentialsId: "7b473a1e-33ed-4ac7-89d3-e9c7f50fc19c", url: "" ]) {
+    withDockerRegistry([ credentialsId: "dockerhub-access", url: "" ]) {
       dockerImage.push()
     }
   }
 
   stage('Deploy') {
     withKubeConfig([credentialsId: 'kubernetes-login',
-                    serverUrl: 'https://60335DB898749C2B6FF40ADE6441CDF5.gr7.us-east-1.eks.amazonaws.com',
+                    serverUrl: 'https://977490BF7EF588E545EA0A2CBEB8F388.gr7.us-east-1.eks.amazonaws.com',
 		    clusterName: 'arn:aws:eks:us-east-1:437889535746:cluster/cluster1']) {
       sh 'kubectl apply -f springboot-webapp-k8s-deploy.yml'
     }
