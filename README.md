@@ -27,7 +27,13 @@ git config --global user.email "walter@tcentre"
 Install ansible, git and clone repo, ansible-playbook command will ask for your sudo password:
 ```
 sudo apt install ansible git
+
 git clone https://github.com/pabonwalt/devops-stupidly-simple.git
+
+or
+
+git clone git@github.com:pabonwalt/devops-stupidly-simple.git
+
 ansible-playbook devops-stupidly-simple/ansible-deploy-CICD-tools.yml -K
 ```
 

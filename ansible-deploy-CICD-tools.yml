@@ -17,6 +17,8 @@
            - apt-transport-https
            - default-jdk
            - git
+           - unzip
+           - vim-nox
 
      - name: Downloading terraform binary compressed
        ansible.builtin.get_url:
