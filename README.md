@@ -60,9 +60,6 @@ terraform apply -auto-approve
 4. We need to call our first pipeline stored in github.
 
 ## SOME GIT COMMANDS
-
-
-
 Use following commands to push changes:
 ```
 git add .
