@@ -54,8 +54,8 @@ terraform apply -auto-approve
 ```
 
 ## CONFIGURE JENKINS AND CREATE EXAMPLE PIPELINE
-1. After Jenkins was installed by Ansible, we need to configure it accesing to http://127.0.0.1:8080 and entering Jenkins default admin password.
-2. We need to install some required plugins as Docker plugin
+1. After Jenkins was installed by Ansible, we need to configure it accesing to http://127.0.0.1:8080 and entering Jenkins default admin password (it's as part of the ansible-playbook output)
+2. We need to install some required plugins as Pipeline, Docker, Kubernetes, Git.
 3. We need to configure some global credentials in order to connect to github and docker hub.
 4. We need to call our first pipeline stored in github.
 
