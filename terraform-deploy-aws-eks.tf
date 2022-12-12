@@ -26,14 +26,14 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "eks4testing"
+  cluster_name = "eks4t-cluster"
 }
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.14.2"
 
-  name = "eks4testing-vpc"
+  name = "eks4t-vpc"
 
   cidr = "10.0.0.0/16"
   azs  = slice(data.aws_availability_zones.available.names, 0, 3)
@@ -87,7 +87,7 @@ resource "aws_security_group" "node_group_two" {
 }
 
 module "eks" {
-  
+
   source  = "terraform-aws-modules/eks/aws"
   version = "18.26.6"
   cluster_name    = local.cluster_name
